@@ -10,11 +10,17 @@ function App() {
     const handleSubmit = async (question) => {
         try {
             const result = await askQuestion(question);
-            setAnswer(result.answer);
+            if (result.answer) {
+                setAnswer(result.answer);
+            } else {
+                setAnswer("Sorry, I don't have an answer for that.");
+            }
         } catch (error) {
+            console.error('Error fetching answer:', error);
             setAnswer('Error: Unable to get an answer at this time.');
         }
     };
+    
 
     return (
         <div className="App">
