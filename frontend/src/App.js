@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import QuestionForm from './components/QuestionForm';
 import Answer from './components/Answer';
 import { askQuestion } from './services/api';
+import './App.css';
 
 function App() {
     const [answer, setAnswer] = useState('');

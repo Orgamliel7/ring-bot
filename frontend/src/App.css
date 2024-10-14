@@ -1,29 +1,53 @@
 .App {
+    display: flex;               /* Use flexbox for centering */
+    flex-direction: column;      /* Stack elements vertically */
+    justify-content: center;     /* Center vertically */
+    align-items: center;         /* Center horizontally */
+    height: 50vh;              /* Full viewport height */
     text-align: center;
     padding: 20px;
-  }
-  
-  h1 {
+    background: linear-gradient(to right, #f3f4f6, #e2e8f0);  /* Soft gradient background */
+    font-family: 'Arial', sans-serif;  /* Set a clean font */
+}
+
+h1 {
     color: #333;
-  }
-  
-  form {
+    font-size: 3rem;            /* Increase font size for prominence */
+    margin-bottom: 20px;        /* Space below the title */
+}
+
+form {
     margin-bottom: 20px;
-  }
-  
-  input {
+    width: 100%;                /* Allow form to take full width */
+    max-width: 400px;          /* Limit max width for better layout */
+}
+
+input {
     padding: 10px;
     margin-right: 10px;
-  }
-  
-  button {
+    width: 70%;                /* Make input wider */
+    border: 1px solid #ccc;    /* Add border */
+    border-radius: 5px;        /* Rounded corners */
+}
+
+button {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
     border: none;
+    border-radius: 5px;        /* Rounded corners for button */
     cursor: pointer;
-  }
-  
-  button:hover {
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+button:hover {
     background-color: #0056b3;
-  }
+}
+
+.answer {
+    margin-top: 20px;          /* Space above the answer */
+    padding: 10px;
+    border: 1px solid #ccc;    /* Add border */
+    border-radius: 5px;        /* Rounded corners */
+    background-color: #f8f9fa; /* Light background for answer */
+}
